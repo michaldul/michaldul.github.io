@@ -44,6 +44,7 @@ sock.close()
 ```
 
 Client does not spill on disk in purpose - we want to benchmark it and the `write` operation would be the most expensive one.
+
 Introducing `socket.socket.sendfile` call simplifies the sever code:
 
 ```python
