@@ -1,6 +1,6 @@
 ---
 published: true
-title: Faster file transfer over sockets with Python 3.5
+title: File transfer over sockets without user-space memory in Python 3.5
 categories: [Python]
 ---
 
