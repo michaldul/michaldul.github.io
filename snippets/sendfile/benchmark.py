@@ -9,7 +9,9 @@ def benchmark():
         chunk = sock.recv(CHUNK_SIZE)
     sock.close()
 
+# execute against no sendfile server
 no_sendfile_times = [timeit.timeit(benchmark, number=1) for i in range(100)]
+# switch to server to sendfile and proceed
 sendfile_times = [timeit.timeit(benchmark, number=1) for i in range(100)]
 
 sns.distplot(no_sendfile_times, label='no sendfile')
